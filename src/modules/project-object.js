@@ -29,6 +29,30 @@ let projectTitles = {
     }]
 };
 
-localStorage.setItem("projectTitles1", JSON.stringify(projectTitles));
-
 export default projectTitles;
+
+
+
+/*
+
+const language = {
+  currentProject: null,
+  set projectName(name) {
+    this[name] = [];
+  },
+  set changeCurrentProject(name) {
+      this.currentProject = name;
+  },
+  set pushIntoProject(value) {
+      this[this.currentProject].push(value);
+  }
+};
+
+language.projectName = 'first';
+language.changeCurrentProject = 'first';
+language.first = {hello: 'world'};
+language.pushIntoProject = {helloAnother: 'world'};
+console.log(language.first); // [{ hello: "world" }, { helloAnother: "world" }]
+
+
+*/

@@ -1,17 +1,16 @@
-let projectTitles = JSON.parse(localStorage.getItem("projectTitles"));
+import storeData from "./storage.js";
 
-function loadNotes(key, object) {
+function loadNotes(key) {
+    let projectObject = storeData('get');
 
-    console.log(projectTitles)
 
     const noteContents = document.getElementById('noteContents');
     const selectedProjName = document.getElementById('selectedProjName');
 
-    //console.log(object + " - " + key)
 
     selectedProjName.innerText = key;
 
-    for (let i = 0; i < object.length;) {
+    for (let i = 0; i < projectObject[key].length;) {
 
         const eachNote = document.createElement('div');
         eachNote.setAttribute('class', 'eachNote');
@@ -19,41 +18,45 @@ function loadNotes(key, object) {
         const checkOff = document.createElement('div');
         checkOff.setAttribute('class', 'checkOff');
 
-        //console.log(projectTitles[key][i].checked)
+        //console.log(projectObject[key][i].checked)
         const checkOffBox = document.createElement('input');
         checkOffBox.setAttribute('type', 'checkbox');
-        /*
-                console.log(projectTitles[key][i].checked)
 
-                if (projectTitles[key][i].checked === true) {
-                    checkOffBox.checked = true;
-                } else {
-                    checkOffBox.checked = false;
-                }
+        //console.log(projectTitles[key][i].checked)
 
-                console.log(projectTitles[key][i].checked)
-        */
+        if (projectObject[key][i].checked === true) {
+            checkOffBox.checked = true;
+        } else {
+            checkOffBox.checked = false;
+        }
+
+        //console.log(projectTitles[key][i].checked)
+
         checkOffBox.addEventListener('change', () => {
             if (checkOffBox.checked === true) {
-                projectTitles[key][i].checked = false;
-            } else {
-                projectTitles[key][i].checked = true;
+                projectObject[key][i - 1].checked = true;
+                storeData('set', projectObject);
+
+            } else if (checkOffBox.checked === false) {
+                projectObject[key][i - 1].checked = false;
+                storeData('set', projectObject)
+
             }
 
-            console.log(checkOffBox.checked);
+            //console.log(checkOffBox.checked);
         })
 
         const noteTitle = document.createElement('div');
         noteTitle.setAttribute('class', 'noteTitle');
-        noteTitle.innerText = object[i].noteName;
+        noteTitle.innerText = projectObject[key][i].noteName;
 
         const noteDate = document.createElement('div');
         noteDate.setAttribute('class', 'noteDate');
-        noteDate.innerText = object[i].dueDate
+        noteDate.innerText = projectObject[key][i].dueDate
 
         const noteDesc = document.createElement('div');
         noteDesc.setAttribute('class', 'noteDesc');
-        noteDesc.innerText = object[i].desc
+        noteDesc.innerText = projectObject[key][i].desc
 
         noteContents.appendChild(eachNote);
         eachNote.appendChild(checkOff);
@@ -63,7 +66,6 @@ function loadNotes(key, object) {
         eachNote.appendChild(noteDesc);
         ++i;
     }
-    localStorage.setItem("projectTitles", JSON.stringify(projectTitles));
 }
 
 export default loadNotes

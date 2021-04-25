@@ -1,9 +1,18 @@
-//import projectTitles from './modules/project-object.js';
+import createProject from './create-proj.js';
+import loadNotes from './load-proj-notes.js'
+import storeData from "./storage.js";
 
-import loadNotes from "./load-proj-notes";
+function ProjTitleDisplay() {
 
-function ProjTitleDisplay(projectTitles) {
-    let keys = Object.keys(projectTitles);
+    let projectObject = storeData('get');
+
+    let keys = Object.keys(projectObject);
+
+    const projNameSubmit = document.getElementById('projNameSubmit');
+    projNameSubmit.addEventListener('click', () => {
+        const projNameInput = document.getElementById('projNameInput').value;
+        createProject(projNameInput);
+    })
 
     const projLists = document.getElementById('projectList');
 
@@ -18,11 +27,9 @@ function ProjTitleDisplay(projectTitles) {
             projects.style.display = "none";
             noteList.style.display = "block";
 
-            //console.log("onclick event: " + keys[i])
-            //console.log("onclick event: " + projectTitles[keys[i]]);
-            loadNotes(keys[i - 1], projectTitles[keys[i - 1]]);
+            loadNotes(keys[i - 1]);
         })
-
+        console.log(keys[i])
         let delBox = document.createElement('div');
         let delImg = document.createElement('img');
         delImg.setAttribute('src', 'img/trashcan.webp');

@@ -3,6 +3,7 @@ import ProjTitleDisplay from './modules/page-load.js';
 import createProject from './modules/create-proj.js';
 import addNotes from './modules/create-note.js';
 import loadNotes from './modules/load-proj-notes.js'
+import storeData from './modules/storage.js'
 
 
 initi(projectTitles);
@@ -14,8 +15,9 @@ function removeAll(parent) {
 }
 
 function initi(onject) {
-    //createProject('test Proj')
-    //addNotes('My project One', 'name1', 'mydescriptuion asdf asd', '06/29/2021')
+    storeData()
+        //createProject('test Proj')
+        //addNotes('My project One', 'name1', 'mydescriptuion asdf asd', '06/29/2021')
 
     ProjTitleDisplay(projectTitles);
     const backBtn = document.getElementById('backBtn');
@@ -29,8 +31,8 @@ function initi(onject) {
         removeAll(noteContents);
     })
 
-    localStorage.setItem("projectTitles", JSON.stringify(projectTitles));
-    let projectTitles2 = JSON.parse(localStorage.getItem("projectTitles"));
+    //localStorage.setItem("projectTitles", JSON.stringify(projectTitles));
+    //let projectTitles2 = JSON.parse(localStorage.getItem("projectTitles"));
 
-    console.log(projectTitles2)
+    //console.log(projectTitles2)
 }

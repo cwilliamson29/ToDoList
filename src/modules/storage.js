@@ -1,9 +1,19 @@
-// Put the object into storage
-//localStorage.setItem('projectTitles', JSON.stringify(projectTitles));
+import projectTitles from './project-object.js';
 
-// Retrieve the object from storage
-//var retrievedObject = localStorage.getItem('projectTitles');
+// keys - set and get
+function storeData(key, object) {
+    let compare = JSON.parse(window.localStorage.getItem('projectTitles'));
+    if (compare === null) {
+        window.localStorage.setItem('projectTitles', JSON.stringify(projectTitles));
+    }
+    if (key === 'set') {
+        window.localStorage.setItem('projectTitles', JSON.stringify(object));
+        //console.log(object);
+    } else if (key === 'get') {
+        let projectObject = JSON.parse(window.localStorage.getItem('projectTitles'));
+        return projectObject
+    }
+    //console.log('retrievedObject: ', JSON.parse(retrievedObject));
+}
 
-//console.log('retrievedObject: ', JSON.parse(retrievedObject));
-
-//let keys2 = Object.keys(JSON.parse(retrievedObject))
+export default storeData
