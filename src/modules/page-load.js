@@ -1,6 +1,7 @@
 import createProject from './create-proj.js';
 import loadNotes from './load-proj-notes.js'
-import storeData from "./storage.js";
+import storeData from './storage.js';
+import setTitleDom from './set-title-dom.js'
 
 function ProjTitleDisplay() {
 
@@ -12,6 +13,7 @@ function ProjTitleDisplay() {
     projNameSubmit.addEventListener('click', () => {
         const projNameInput = document.getElementById('projNameInput').value;
         createProject(projNameInput);
+        setTitleDom(projNameInput);
     })
 
     const projLists = document.getElementById('projectList');
