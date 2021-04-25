@@ -1,0 +1,157 @@
+@media only screen and (max-width: 500px) {
+    #phoneNav {
+        display: block;
+        margin: auto;
+        width: 100%;
+        color: white;
+        background: rgb(128, 128, 100);
+        text-align: center;
+        height: 70px;
+    }
+    #phoneNav h1 {
+        padding-top: 10px;
+        font-size: 30pt;
+    }
+    #content {
+        height: 100%;
+        background-color: beige;
+    }
+    #addContainer {
+        display: block;
+        height: 45px;
+        display: flex;
+    }
+    #projNameInput {
+        margin: 3px;
+        width: 70%;
+    }
+    #projNameSubmit {
+        margin: 3px;
+        width: 23%;
+    }
+    /*********************
+    ********display hidden**
+    *********************/
+    #projects {
+        display: block;
+        height: 100%;
+    }
+    #projects li {
+        font-size: 20pt;
+        padding: 20px;
+        margin-bottom: 1px;
+        border-bottom: 3px dotted rgb(102, 98, 98);
+        background: rgb(175, 173, 145);
+    }
+    #projects li div {
+        width: 25px;
+        height: 25px;
+        position: relative;
+        font-size: 30pt;
+        float: right;
+        padding: 2;
+        border-radius: 50%;
+        /*background: rgb(114, 113, 113);*/
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
+        background: #f3e2c7;
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+        border: 1px dotted bisque;
+        opacity: 70%;
+        display: flex;
+    }
+    #projectList li div img {
+        height: 80%;
+        margin: auto;
+    }
+    /*********************
+    ********display hidden**
+    *********************/
+    #noteList {
+        display: none;
+        padding: 10px;
+        height: 100%;
+        background-color: beige;
+    }
+    #backCont {
+        width: 100%;
+        height: 40px;
+        display: flex;
+    }
+    #backBtn {
+        border-radius: 50%;
+        /*background-color: grey;*/
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
+        background: #f3e2c7;
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dotted rgb(94, 94, 94);
+    }
+    #backBtn img {
+        width: 40%;
+        padding-right: 4px;
+    }
+    #selectedProjName {
+        width: 90%;
+        padding-left: 10px;
+        font-size: 22pt;
+        overflow: hidden;
+    }
+    #noteContents {
+        width: 98%;
+        height: 95%;
+        background-color: rgb(250, 214, 166);
+        border: 2px dashed black;
+        border-radius: 10px;
+    }
+    .eachNote {
+        width: 93%;
+        margin: 1%;
+        padding: 2%;
+        border: 2px dotted grey;
+        border-radius: 5px;
+        background-color: rgb(202, 174, 136);
+    }
+    .checkOff {
+        width: 20px;
+        float: left;
+        padding-top: 3%;
+        height: 28px;
+    }
+    .noteTitle {
+        width: 62%;
+        height: 40px;
+        float: left;
+        font-size: 15pt;
+        font-weight: bold;
+    }
+    .noteDate {
+        width: 30%;
+        float: left;
+        height: 40px;
+        font-weight: bold;
+    }
+    .noteDesc {
+        width: 96%;
+        padding: 4%;
+    }
+}
