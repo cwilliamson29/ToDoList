@@ -2,8 +2,8 @@ import projectTitles from './modules/project-object.js';
 import ProjTitleDisplay from './modules/page-load.js';
 import createProject from './modules/create-proj.js';
 import addNotes from './modules/create-note.js';
-import loadNotes from './modules/load-proj-notes.js'
-import storeData from './modules/storage.js'
+import loadNotes from './modules/load-proj-notes.js';
+import storeData from './modules/storage.js';
 
 
 initi(projectTitles);
@@ -14,25 +14,41 @@ function removeAll(parent) {
     }
 }
 
-function initi(onject) {
-    storeData()
-        //createProject('test Proj')
-        //addNotes('My project One', 'name1', 'mydescriptuion asdf asd', '06/29/2021')
+function initi() {
+    storeData();
 
     ProjTitleDisplay(projectTitles);
     const backBtn = document.getElementById('backBtn');
+    const addBackBtn = document.getElementById('addBackBtn');
+    const noteContents = document.getElementById('noteContents');
+    const addBtn = document.getElementById('addBtn');
+
+    // main add to note to be hidden
+    const addNoteCont = document.getElementById('addNoteCont');
+
+    //main notelist o be hidden
     const noteList = document.getElementById('noteList');
+
+    //main project list to be hidden
     const projectsDiv = document.getElementById('projects');
-    const noteContents = document.getElementById('noteContents')
 
+    //note list back button
     backBtn.addEventListener('click', () => {
-        noteList.style.display = "none";
         projectsDiv.style.display = "block";
+        noteList.style.display = "none";
+        addNoteCont.style.display = "none"
         removeAll(noteContents);
-    })
+    });
 
-    //localStorage.setItem("projectTitles", JSON.stringify(projectTitles));
-    //let projectTitles2 = JSON.parse(localStorage.getItem("projectTitles"));
-
-    //console.log(projectTitles2)
+    addBtn.addEventListener('click', () => {
+        projectsDiv.style.display = "none";
+        noteList.style.display = "none";
+        addNoteCont.style.display = "block";
+    });
+    // add to note back button
+    addBackBtn.addEventListener('click', () => {
+        projectsDiv.style.display = "none";
+        noteList.style.display = "block";
+        addNoteCont.style.display = "none";
+    });
 }

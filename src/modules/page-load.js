@@ -1,7 +1,7 @@
 import createProject from './create-proj.js';
-import loadNotes from './load-proj-notes.js'
+import loadNotes from './load-proj-notes.js';
 import storeData from './storage.js';
-import setTitleDom from './set-title-dom.js'
+import setTitleDom from './set-title-dom.js';
 
 function ProjTitleDisplay() {
 
