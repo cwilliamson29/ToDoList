@@ -4,13 +4,16 @@ function createProject(title) {
     let projectObject = storeData('get');
 
     if (title in projectObject) {
-        console.log("true")
+        const invalidInput = document.getElementById('projNameInput')
+        invalidInput.style.boxShadow = "0 0 10px 4px red"
+        return true
     } else {
-        console.log("false")
+        projectObject[title] = [];
+        storeData('set', projectObject)
+            //return false
     }
-    projectObject[title] = {};
-    storeData('set', projectObject)
-    console.log(storeData('get'))
+
+
 }
 
 export default createProject

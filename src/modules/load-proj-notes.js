@@ -8,7 +8,6 @@ function loadNotes(key) {
     const noteContents = document.getElementById('noteContents');
     const selectedProjName = document.getElementById('selectedProjName');
 
-
     selectedProjName.innerText = key;
 
     for (let i = 0; i < projectObject[key].length;) {

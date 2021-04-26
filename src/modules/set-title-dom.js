@@ -1,5 +1,6 @@
 function setTitleDom(title) {
     const projLists = document.getElementById('projectList');
+
     let listItems = document.createElement('li');
     listItems.setAttribute('id', title);
     listItems.innerText = title;
@@ -8,6 +9,9 @@ function setTitleDom(title) {
             const projectsList = document.getElementById('projects');
             projects.style.display = "none";
             noteList.style.display = "block";
+
+            const selectedProjName = document.getElementById('selectedProjName');
+            selectedProjName.innerText = title;
 
             loadNotes(title);
         })

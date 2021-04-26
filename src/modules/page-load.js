@@ -2,6 +2,7 @@ import createProject from './create-proj.js';
 import loadNotes from './load-proj-notes.js';
 import storeData from './storage.js';
 import setTitleDom from './set-title-dom.js';
+import fieldValid from './field-valid.js';
 
 function ProjTitleDisplay() {
 
@@ -12,8 +13,15 @@ function ProjTitleDisplay() {
     const projNameSubmit = document.getElementById('projNameSubmit');
     projNameSubmit.addEventListener('click', () => {
         const projNameInput = document.getElementById('projNameInput').value;
-        createProject(projNameInput);
-        setTitleDom(projNameInput);
+
+        if (fieldValid("title")) {
+            return
+        } else if (createProject(projNameInput)) {
+            return
+        } else {
+            setTitleDom(projNameInput);
+        }
+
     })
 
     const projLists = document.getElementById('projectList');
@@ -31,7 +39,6 @@ function ProjTitleDisplay() {
 
             loadNotes(keys[i - 1]);
         })
-        console.log(keys[i])
         let delBox = document.createElement('div');
         let delImg = document.createElement('img');
         delImg.setAttribute('src', 'img/trashcan.webp');

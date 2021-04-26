@@ -8,7 +8,7 @@ function addNotes(title, name1, desc1, date1) {
     console.log(title)
     let projectObject = storeData('get');
 
-    projectObject[title].push(createNote(name1, desc, date1, false));
+    projectObject[title].push(createNote(name1, desc1, date1, false));
 
     storeData('set', projectObject);
 }
