@@ -26,8 +26,13 @@
 
         <div id="noteList">
             <div id="backCont">
-                <div id="backBtn"><img src="img/leftarrow.png"></div>
+                <div id="backBtn" class="backBtn"><img src="img/leftarrow.png"></div>
                 <div id="selectedProjName">Placeholder Name</div>
+            </div>
+            <div id="addBtn">
+                <div id="roundAddBtn">
+                    +
+                </div>
             </div>
             <div id="noteContents">
                 <!--<div class="eachNote">
@@ -37,6 +42,23 @@
                     <div class="noteDesc">This note is just ehre to show some text and thats it, nothing more, dont over think it george. M'k, pumpkin?</div>
                 </div>-->
             </div>
+        </div>
+
+        <div id="addNoteCont">
+            <div id="backCont">
+                <div id="addBackBtn" class="backBtn"><img src="img/leftarrow.png"></div>
+                <div id="selectedProjName">Add Note</div>
+            </div>
+            <div id="addNote">
+                <label>Note Title</label>
+                <input type="text" id="addNotetitle" placeholder="Title">
+                <label>Note Description</label>
+                <input type="text" id="addNotedesc" placeholder="Deesciption">
+                <label>Note Due Date</label>
+                <input type="date" id="addNoteDate" placeholder="date">
+                <button id="noteSubmit">Add Note</button>
+            </div>
+
         </div>
 
     </div>

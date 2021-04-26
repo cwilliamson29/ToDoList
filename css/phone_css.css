@@ -86,7 +86,7 @@
         height: 40px;
         display: flex;
     }
-    #backBtn {
+    .backBtn {
         border-radius: 50%;
         /*background-color: grey;*/
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
@@ -107,7 +107,7 @@
         align-items: center;
         border: 2px dotted rgb(94, 94, 94);
     }
-    #backBtn img {
+    .backBtn img {
         width: 40%;
         padding-right: 4px;
     }
@@ -116,6 +116,34 @@
         padding-left: 10px;
         font-size: 22pt;
         overflow: hidden;
+    }
+    #addBtn {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    #roundAddBtn {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 30pt;
+        font-weight: bold;
+        border: 2px dashed rgb(94, 94, 94);
+        padding-bottom: 2px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
+        background: #f3e2c7;
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
     }
     #noteContents {
         width: 98%;
@@ -155,4 +183,42 @@
         width: 96%;
         padding: 4%;
     }
+}
+
+
+/*********************
+    ********display hidden**
+    *********************/
+
+#addNoteCont {
+    display: none;
+    padding: 3%;
+    margin: auto;
+    width: 90%;
+    height: 95%;
+    background-color: rgb(250, 214, 166);
+    border: 2px dashed black;
+    border-radius: 10px;
+}
+
+#addNote {
+    width: 100%;
+}
+
+#addNotetitle,
+#addNotedesc,
+#addNoteDate {
+    display: block;
+    width: 96%;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#noteSubmit {
+    display: block;
+    width: 85%;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
 }
