@@ -1,4 +1,5 @@
 import storeData from "./storage.js";
+import fieldValid from './field-valid.js'
 
 function createProject(title) {
     let projectObject = storeData('get');
@@ -9,8 +10,8 @@ function createProject(title) {
         return true
     } else {
         projectObject[title] = [];
-        storeData('set', projectObject)
-            //return false
+        storeData('set', projectObject);
+        fieldValid('clear');
     }
 
 

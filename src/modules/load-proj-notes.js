@@ -1,11 +1,20 @@
 import storeData from "./storage.js";
-import addNotes from './create-note.js';
+
+function removeAll(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 function loadNotes(key) {
     let projectObject = storeData('get');
 
-
     const noteContents = document.getElementById('noteContents');
+
+
+    removeAll(noteContents);
+
+
     const selectedProjName = document.getElementById('selectedProjName');
 
     selectedProjName.innerText = key;

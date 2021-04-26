@@ -18,6 +18,7 @@ function initi() {
     storeData();
 
     ProjTitleDisplay(projectTitles);
+    /*
     const backBtn = document.getElementById('backBtn');
     const addBackBtn = document.getElementById('addBackBtn');
     const noteContents = document.getElementById('noteContents');
@@ -49,32 +50,12 @@ function initi() {
     });
     // add to note back button
     addBackBtn.addEventListener('click', () => {
+        const key = document.getElementById('selectedProjName').value;
         projectsDiv.style.display = "none";
         noteList.style.display = "block";
         addNoteCont.style.display = "none";
+        removeAll(noteContents);
+        loadNotes(key)
         fieldValid("clear");
-    });
-
-    const noteSubmit = document.getElementById('noteSubmit');
-
-    noteSubmit.addEventListener('click', () => {
-
-        console.log(fieldValid("note"));
-
-        if (fieldValid("note") === true) {
-            return
-        } else if (fieldValid("note") === false) {
-            let key = document.getElementById('selectedProjName').innerText;
-
-            console.log("adding to notes object:   " + key);
-            const addNoteTitle = document.getElementById('addNotetitle').value;
-            const addNotedesc = document.getElementById('addNotedesc').value;
-            const addNoteDate = document.getElementById('addNoteDate').value;
-
-            addNotes(key, addNoteTitle, addNotedesc, addNoteDate);
-        } else {
-            console.log("evenlistener bypass")
-        }
-    })
-
+    });*/
 }

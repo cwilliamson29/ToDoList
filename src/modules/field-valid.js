@@ -25,7 +25,7 @@ function fieldValid(type) {
             if (invalidInput < 1) {
                 invalidField.style.boxShadow = "0 0 10px 4px red";
                 truthy = true;
-                console.log("inside valid loop")
+
             } else {
                 invalidField.style.boxShadow = '';
             }
@@ -39,6 +39,7 @@ function fieldValid(type) {
         for (let i = 0; i < fields.length;) {
             let invalidField = document.getElementById(fields[i]);
             invalidField.style.boxShadow = '';
+            invalidField.value = '';
             ++i;
         }
     } else {
