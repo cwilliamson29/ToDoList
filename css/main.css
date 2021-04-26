@@ -5,6 +5,244 @@
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: beige;
+}
+
+@media only screen and (min-width: 1201px) {
+    #phoneNav {
+        display: block;
+        margin: auto;
+        width: 100%;
+        color: white;
+        background: rgb(128, 128, 100);
+        text-align: center;
+        height: 70px;
+    }
+    #phoneNav h1 {
+        padding-top: 10px;
+        font-size: 30pt;
+    }
+    #content {
+        min-height: 100%;
+        width: 100%;
+        background-color: beige;
+    }
+    #addContainer {
+        display: block;
+        height: 45px;
+        display: flex;
+    }
+    #projNameInput {
+        margin: 3px;
+        width: 70%;
+    }
+    #projNameSubmit {
+        margin: 3px;
+        width: 23%;
+    }
+    /*********************
+    ********display hidden**
+    *********************/
+    #projects {
+        display: block !important;
+        height: 100vh;
+        width: 28%;
+        position: absolute;
+    }
+    #projects li {
+        display: flex;
+        height: 70px;
+        font-size: 20pt;
+        padding: 0px;
+        margin-bottom: 1px;
+        border-bottom: 3px dotted rgb(102, 98, 98);
+        background: rgb(175, 173, 145);
+        overflow: hidden;
+    }
+    #projects aside {
+        padding: 20px;
+        width: 75%;
+        height: 100%;
+    }
+    #projects li div {
+        width: 35px;
+        height: 35px;
+        font-size: 30pt;
+        float: right;
+        margin-top: 15px;
+        border-radius: 50%;
+        /*background: rgb(114, 113, 113);*/
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
+        background: #f3e2c7;
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+        border: 1px dotted bisque;
+        display: flex;
+    }
+    #projectList li div img {
+        height: 80%;
+        margin: auto;
+    }
+    /*********************
+    ********display hidden**
+    *********************/
+    #noteList {
+        display: block !important;
+        position: absolute;
+        top: 260px;
+        left: 29%;
+        width: 71%;
+        background-color: beige;
+    }
+    #backCont {
+        width: 30%;
+        height: 40px;
+        display: flex;
+    }
+    #addBackBtn {
+        display: none;
+    }
+    #backBtn {
+        display: none;
+    }
+    .backBtn {
+        border-radius: 50%;
+        background: #f3e2c7;
+        background: -moz-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        background: -webkit-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        background: linear-gradient(135deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dotted rgb(94, 94, 94);
+    }
+    .backBtn img {
+        width: 40%;
+        padding-right: 4px;
+    }
+    #selectedProjName {
+        width: 90%;
+        padding-left: 10px;
+        font-size: 22pt;
+        overflow: hidden;
+    }
+    #addBtn {
+        display: none;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    #roundAddBtn {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 30pt;
+        font-weight: bold;
+        border: 2px dashed rgb(94, 94, 94);
+        padding-bottom: 2px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
+        background: #f3e2c7;
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+    }
+    #noteContents {
+        width: 98%;
+        min-height: 100%;
+        background-color: rgb(250, 214, 166);
+        border: 2px dashed black;
+        border-radius: 10px;
+        margin-right: 0;
+    }
+    .eachNote {
+        width: 93%;
+        margin: 1%;
+        padding: 1%;
+        border: 2px dotted grey;
+        border-radius: 5px;
+        background-color: rgb(202, 174, 136);
+    }
+    .checkOff {
+        width: 20px;
+        float: left;
+        padding-top: 1%;
+        height: 28px;
+    }
+    .noteTitle {
+        width: 78%;
+        height: 40px;
+        float: left;
+        font-size: 15pt;
+        font-weight: bold;
+    }
+    .noteDate {
+        width: 18%;
+        float: left;
+        height: 40px;
+        font-weight: bold;
+    }
+    .noteDesc {
+        width: 96%;
+        padding: 1%;
+    }
+    /*********************
+    ********display hidden**
+    *********************/
+    #addNoteCont {
+        display: block !important;
+        position: absolute;
+        margin-top: 5px;
+        left: 29%;
+        width: 70%;
+        height: 185px;
+        background-color: rgb(250, 214, 166);
+        border: 2px dashed black;
+        border-radius: 10px;
+    }
+    #addNote {
+        width: 100%;
+        text-align: right;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    #addNote label {
+        padding-left: 30%;
+    }
+    #addNotetitle,
+    #addNotedesc,
+    #addNoteDate {
+        display: inline;
+        width: 40%;
+        height: 20px;
+        margin-bottom: 5px;
+    }
+    #noteSubmit {
+        display: block;
+        width: 65%;
+        height: 40px;
+        margin: auto;
+        margin-top: 10px;
+    }
 }
