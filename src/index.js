@@ -51,4 +51,15 @@ function initi() {
         noteList.style.display = "block";
         addNoteCont.style.display = "none";
     });
+
+    const noteSubmit = document.getElementById('noteSubmit');
+    noteSubmit.addEventListener('click', () => {
+        let key = document.getElementById('selectedProjName').innerText;
+        console.log("adding to notes object:   " + key);
+        const addNoteTitle = document.getElementById('addNotetitle').value;
+        const addNotedesc = document.getElementById('addNotedesc').value;
+        const addNoteDate = document.getElementById('addNoteDate').value;
+
+        addNotes(key, addNoteTitle, addNotedesc, addNoteDate);
+    })
 }
